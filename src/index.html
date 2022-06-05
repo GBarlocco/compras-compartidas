@@ -1,0 +1,224 @@
+<!--
+    Autores: Joaquín Carrasco (163609) & Gastón Barlocco (241025)
+ -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Obligatorio Nº1 - Programación 1"/>
+    <meta name="keywords" content="Universidad, Eseñanza, ORT, Tareas, Obligatorio, Programación"/>
+    <meta name="author" content="Joaquín Carrasco & Gastón Barlocco" />
+    <meta name="robots" content="index,follow" />
+
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/clases.js"> </script>
+    <script src="js/funciones.js"> </script>
+    <script src="https://www.google.com/jsapi"></script> 
+
+    <title>Compras compartidas</title>
+
+</head>
+
+<body>
+<header id="inicio">
+    <img id="inicio1" src="img/LogoWeb1.png" alt="Logo ">
+    <img id="inicio2" src="img/LogoWeb2.png" alt="Logo ">
+</header>
+
+<nav>
+    <ul>
+        <li> <a href="#registro"><img src="img/perfil.png" alt="Perfil"></a> </li>
+        <li> <a href="#compras"><img src="img/carrito.jpg" alt="Carro de compras"></a> </li>
+        <li> <a href="#consultas"><img src="img/pregunta.jpg" alt="Ayuda" ></a> </li>
+        <li> <a href="https://www.instagram.com/" target="_blank"><img src="img/instagram.svg" alt="instagram"></a> </li>
+        <li> <a href="https://www.facebook.com/" target="_blank"><img src="img/facebook.svg" alt="Facebook"></a> </li>
+        <li> <a href="https://uy.linkedin.com/" target="_blank"><img src="img/linkedin.svg" alt="linkedin"></a> </li>  
+    </ul>
+</nav>
+
+
+<main>
+    <section id="registro">
+        <header> <h1>Personas</h1> </header>
+        
+        <article>
+            <h2>Registro</h2>
+
+            <form action="#" method="POST" id="formRegistroPersonas">
+
+                <label for="nombrePersona"> Nombre: </label>
+                <input class="redondeado" type="text" id="nombrePersona" placeholder="Nombre" maxlength="20" required  >
+
+                <label for="seccionPersona"> Sección: </label>
+                <input class="redondeado"  type="number" id="seccionPersona" placeholder="Sección" min="1" max="8" required>
+
+                <label for="mailPersona"> Mail: </label>
+                <input class="redondeado"  type="email" id="mailPersona" placeholder="Mail" required>
+
+                <div> <button class="redondeado"  type="button" id="agregarPersona"> Agregar</button> </div>
+    
+            </form>
+
+        </article>
+
+        <article>
+            <h2>Visualización</h2>
+
+            <ul id="listaRegistroPersonas">
+            </ul>
+
+        </article>
+
+        <div><a href="#inicio"> <img src="img/subir.svg" alt="Ícono inicio de página"></a></div>
+
+    </section>
+
+    <section id="compras">
+        <header> <h1>Compras</h1> </header>
+        
+        <article>
+            <h2>Registro</h2>
+
+            <form action="#" method="POST" id="formRegistroCompras">
+
+                <label for="registroHechaPor"> Hecha por: </label>
+
+                <select class="redondeado" id="registroHechaPor" >
+                </select>
+            
+                <label for="registroDescricpionCompra" > Descripción: </label>
+                <input class="redondeado"  type="text" id="registroDescricpionCompra" placeholder="Descripción" maxlength="40" required>
+
+                <label for="registroMontoCompra" > Monto: </label>
+                <input class="redondeado"  type="number" id="registroMontoCompra" placeholder="Ingrese el monto" min="1" required>
+
+                <p>Corresponde a:</p>
+                <div id="contenedorRegistro">
+                    
+                </div>
+
+                <div> <button class="redondeado"  type="button" id="agregarCompra"> Agregar</button> </div>
+
+            </form>
+
+        </article>
+        
+        
+        <article>
+            <h2>Reintegro</h2>
+
+            <form action="#" method="POST" id="formReintegroCompra">
+
+                <label for="numeroReintegro"> Se reintegra la compra: </label>
+                <select class="redondeado" id="numeroReintegro">
+                </select>
+    
+                <div> <button class="redondeado" type="button" id="reintegrarCompra"> Reintegro</button> </div>   
+
+            </form>
+
+        </article>
+
+        <article>
+           
+            <h2>Visualización</h2>
+            <label>Orden:</label>
+            <label> <input id="ordenarTablaNumero" class="redondeado" type="radio" checked name="ordenVisualizacion"> número </label>
+            <label> <input id="ordenarTablaNombre" class="redondeado"  type="radio" name="ordenVisualizacion"> nombre </label>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>NUMERO</th>
+                        <th>RESPONSABLE</th>
+                        <th>DESCRIPCION</th>
+                        <th>MONTO</th>
+                        <th>PARTICIPANTES</th>
+                        <th>ESTADO</th>
+                    </tr>
+                </thead>
+                
+                <tbody id="tablaVisualizacion">
+                   
+                </tbody>
+
+            </table>
+
+        </article>
+
+        <div><a href="#inicio"> <img src="img/subir.svg" alt="Ícono inicio de página" ></a></div>
+
+    </section>
+
+    
+    <section id="consultas">
+        <header> <h1>Consultas</h1> </header> 
+
+        <article> 
+            <h2>Pagos/Cobros pendientes por persona</h2>
+            
+            <form action="#" method="GET" id="formConsultaPersona">
+
+                <label for="consultaSaldos"> Persona: </label>
+                <select class="redondeado" id="consultaSaldos">
+                </select>
+
+                <button class="redondeado" type="button" id="consultarCompras"> Consultar totales</button>
+
+            </form>
+
+            <p id="participoPor"></p>
+            <p id="responsablePor"></p>
+
+        </article>
+
+
+        <article>
+            <h2>Descripción</h2>
+            
+            <form action="#" method="GET" id="formConsultaDescripcion">
+
+                <label for="palabraBuscar">Palabra a buscar</label>
+                <input class="redondeado" type="text" id="palabraBuscar" >
+                <button class="redondeado" type="button" id="consultarDescripcion"> Consultar compras</button>
+
+            </form>
+            
+            <h3>Resultado (se muestra primera coincidencia)</h3>
+
+            <ul id="busquedaPalabra">
+                
+
+            </ul>
+
+        </article>
+
+
+        <article>
+
+            <h2>Gráfica</h2>
+            <span>Se muestra cantidad de compras totales por rangos de a $100 (0-99, 100-199, etc)</span>
+            <button class="redondeado" type="button" id="graficar"> Graficar</button>
+
+            <div id="grafico"></div>
+            
+        </article>
+
+        <div>
+            <a href="#inicio"> <img src="img/subir.svg" alt="Ícono inicio de página" ></a>
+        </div>
+
+    </section>
+
+
+</main>
+
+<footer>
+    <p> Obligatorio de Programación 1 - 1er semestre 2020 - Realizado por: Joaquín Carrasco & Gastón Barlocco</p>
+</footer>
+ 
+</body>
+</html>

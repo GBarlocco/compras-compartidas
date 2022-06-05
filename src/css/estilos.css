@@ -1,0 +1,119 @@
+/* Autores: Joaquín Carrasco (163609) & Gastón Barlocco (241025) */
+
+body{
+    background-color:white;
+    font-family: Arial;
+}
+
+header img{
+    width: 400px;
+}
+
+nav{
+    background-color: blue ;
+    border-radius: 50px;
+}
+
+nav ul li{
+    display: inline;
+    list-style: none;
+}
+
+nav ul li a img{
+    width: 40px;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+section{
+    background-color: beige;
+    width: 95%;
+    padding-left: 5%;
+    border-radius: 20px;
+}
+
+section article p{
+    margin-top: 20px;
+}
+
+section h1{
+    font-size: 25px;
+}
+
+section h2{
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+section h3{
+    font-size: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+section div a img{
+    margin-top: 20px;
+    width: 30px;
+}
+
+section article table thead th,td{
+    border: 1px solid grey;
+    text-align: center;
+    padding: 5px;
+}
+
+section article form div button{
+    margin-top: 20px;
+}
+
+section article ul li span{
+    color: red;
+    font-weight: bold;
+}
+
+#registroDescricpionCompra{
+    width: 300px;
+}
+
+.redondeado{
+    border-radius: 20px;
+}
+
+#contenedorRegistro{
+    margin-top: 20px;
+}
+
+#grafico{
+    margin-top: 2%;
+    width: 800px;
+    height: 600px;
+}
+
+footer{
+    background-color: rgb(230, 230, 16);
+    border-radius: 50px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 13px;
+}
+
+@media screen and (min-width:600px){
+    #inicio1 {
+        display: block;
+     }
+    #inicio2 {
+        display: none;
+     }
+}
+
+@media screen and (max-width:600px){
+    #inicio1 {
+        display: none;
+    }
+    #inicio2 {
+        display: block;
+        width: 250px;
+        height:90px;
+     }
+}
