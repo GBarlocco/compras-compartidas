@@ -1,12 +1,12 @@
 // Autores: Joaquín Carrasco (163609) & Gastón Barlocco (241025).
 
 window.addEventListener("load",inicio);
-var miSistema = new Sistema();
+let miSistema = new Sistema();
 
-//Variables genericas 
-var conteoNumeroCompra =1;
-var sePresionoConsultaCompra = false;
-var sePresionoGraficar = false;
+//letiables genericas 
+let conteoNumeroCompra =1;
+let sePresionoConsultaCompra = false;
+let sePresionoGraficar = false;
 
 
 //Funcion inicio para escuchar a todos los botones de la web.
@@ -300,21 +300,21 @@ function graficarValores(){
         function dibujarGrafico() {
             let datosGrafica = miSistema.darValoresGrafica();
 
-            var data = new google.visualization.DataTable();
+            let data = new google.visualization.DataTable();
             data.addColumn('string', 'Margen de compras');
             data.addColumn('number', 'Cantidad de compras');
 
             
             data.addRows(datosGrafica);
             
-            var options = { "title": "Rangos",
+            let options = { "title": "Rangos",
                 
             vAxis: {
                     format: "0",
                 }
             };
 
-            var grafica = new google.visualization.ColumnChart(document.getElementById('grafico'));
+            let grafica = new google.visualization.ColumnChart(document.getElementById('grafico'));
             grafica.draw(data, options);
         }   
     }  
